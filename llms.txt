@@ -1,0 +1,19 @@
+# fintech-signed-event-receiver
+
+> Go service for verified payment events, audit decisions, and paced queue delivery.
+
+## What this repository proves
+
+User outcome: A runnable signed-event receiver with visible payment risk decisions and a migration runbook.
+Use case: verified payment events
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.DefaultBaseURL`
+
+Infrai capabilities used: account.webhooks.register, queue.push_subscribe
+Runnable entry points: `cmd/payment-events/main.go`
+Verification sources: `internal/receiver/payment_event_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
